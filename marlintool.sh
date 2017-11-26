@@ -33,7 +33,7 @@ case $arch in
 esac
 
 # Serialport for uploading
-port="/dev/ttyUSB0"
+port="/dev/ttyACM0"
 
 # Where to put the arduino toolchain
 arduinoDir="./arduino"
