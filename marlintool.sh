@@ -3,17 +3,20 @@
 # by mmone with contribution by jhol
 # on github at https://github.com/mmone/marlintool
 
+# Marlin fork optimized by Gurgek to his Printers
+marlinRepositoryUrl=https://github.com/gurgek/Marlin"
+
 # Marlin fork optimized for the AnetA8 Prusa clone
-marlinRepositoryUrl="https://github.com/SkyNet3D/Marlin"
+#marlinRepositoryUrl="https://github.com/SkyNet3D/Marlin"
 
 # Original Marlin
 # marlinRepositoryUrl="https://github.com/MarlinFirmware/Marlin"
 
 # Anet board
-boardString="anet:avr:anetv1"
+#boardString="anet:avr:anetv1"
 
 # Arduino Mega
-# boardString="arduino:avr:mega:cpu=atmega2560"
+boardString="arduino:avr:mega:cpu=atmega2560"
 
 arduinoToolchainVersion="1.8.5"
 
@@ -37,6 +40,9 @@ arduinoDir="./arduino"
 
 # Where to checkout Marlin sources
 marlinDir="Marlin"
+
+#Which Marlin Branch to checkout
+marlinBranch="D-Bot"
 
 # Build directory
 buildDir="./build"
@@ -99,7 +105,7 @@ getMarlin()
 {
    echo -e "\nCloning Marlin \"$marlinRepositoryUrl\"...\n"
 
-   git clone "$marlinRepositoryUrl" "$marlinDir" 
+   git clone -b "$marlinBranch" "$marlinRepositoryUrl" "$marlinDir" 
    exit
 }
 
