@@ -98,6 +98,11 @@ getDependencies()
    git clone https://github.com/olikraus/U8glib_Arduino.git
    mv -f U8glib_Arduino "$arduinoDir"/libraries/U8glib_Arduino
    rm -rf U8glib_Arduino
+   
+   git clone https://github.com/teemuatlut/TMC2130Stepper.git
+   mv -f TMC2130Stepper "$arduinoDir"/libraries/TMC2130Stepper
+   rm -rf TMC2130Stepper
+
 }
 
 ## Clone Marlin
